@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maquetas Web</title>
+    <!--ESTILOS CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Lato:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!--HEADER-->
+<header>
+    <div class="header_container">
+        <h1>MAQUETAS WEB</h1>
+        <nav class="menu-hamburguesa">
+            <button class="boton-hamburguesa">
+              <span class="linea"></span>
+              <span class="linea"></span>
+              <span class="linea"></span>
+            </button>
+            <ul class="menu">
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#maquetas">Acerca de</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!--MAIN-->
+<main>
+    <section id="inicio">
+        <div class="container_inicio">
+            <div class="effect_opacity">
+                <div class="info-banner">
+                    <h6>MAQUETAS WEB</h6>
+                    <p>Páginas web modernas, responsivas y personalizables por bajo costo.</p>
+                    <div class="container-buttons">
+                        <a href="#maquetas" class="button-banner">DISEÑOS</a>
+                        <a href="#contacto" class="button-banner">CONTACTO</a>
+                    </div>
+            </div>
+            </div>
+        </div>
+        <div class="skew"></div>
+    </section>
+
+<!--insertar skew (IZQ a der)-->
+<div class="skew-arriba"></div>
+
+    <section id="maquetas">
+        <div class="general_container" id="maquetas_container">
+            <div class="containter_content">
+                <h2>DISEÑOS</h2>
+
+                <div class="container_designs">
+
+                    <div class="design">
+                        <img src="./imagenes/mtsweb.jpeg" alt="">
+                    </div>
+
+                    <div class="design">
+                        <img src="./imagenes/mtsweb.jpeg" alt="">
+                    </div>
+
+                    <div class="design">
+                        <img src="./imagenes/mtsweb.jpeg" alt="">
+                    </div>
+
+                        <div id="desplegable" class="oculto">
+                            <div class="design">
+                                <img src="./imagenes/mtsweb.jpeg" alt="">
+                            </div>
+
+                            <div class="design">
+                                <img src="./imagenes/mtsweb.jpeg" alt="">
+                            </div>
+
+                            <div class="design">
+                                <img src="./imagenes/mtsweb.jpeg" alt="">
+                            </div>
+                        </div>
+
+                    <button id="miBoton">VER MÁS</button>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!--insertar skew (IZQ a der)-->
+<div class="skew-main"></div>
+
+    <section id="contacto">
+        <div class="general_container" id="form_container">
+            <div class="contact-container">
+                <h2>Contacto</h2>
+
+                <form action="./formulario.php" method="POST">
+                  <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                  <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                  <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+
+                  <input type="submit" value="Enviar">
+                </form>
+              </div>
+      
+              <div class="info-container">
+                <h2>Información de contacto</h2>
+                <p>Teléfono: </p>
+                <p>Correo electrónico: </p>
+                <p>Github: </p>
+              </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <!--FOOTER-->
+<footer>
+    <p>footer</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<!--
+    Quiero que en el top, no se vea el menu
+    en la seccion de inicio (top) de 100vh, quiero
+    que tenga dos botones, uno a las maquetas
+    y otro al contacto
+    los botones tienen que desplazarte con un efecto
+    deslizante hacia alli
+
+    quiero esos botones luego de un breve contenedor
+    de texto con info super resumida y llamativa
+    que tenga el titulo de la página arriba
+    ------------------------------------------------
+    luego de eso, un skew que coincida con el fondo de las maquetas
+    de la seccion de maquetas
+    -------------------------------------------------
+    esa seccion va a tener el titulo y una galeria
+    desplegble. tiene que mostrar los modelos mas
+    llamativos como viste previa.
+    se tiene que podes expandir y que aparezca
+    con una breve descripcion de esa maqueta
+    Y SU PRECIO ESTIMADO. CON BOTONES EN VERDE
+    --------------------------------------------------
+    luego de esa una seccion con breve info mia y
+    el por qué hago esto
+    -------------------------------------------------
+    por ultimo el formulario de contacto
+-->
