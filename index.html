@@ -7,6 +7,7 @@
 
     <title>Maquetas Web</title>
     <!--ESTILOS CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <!--FUENTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,55 +50,42 @@
             </div>
             </div>
         </div>
-        <div class="skew"></div>
+
     </section>
 
-<!--insertar skew (IZQ a der)-->
-<div class="skew-arriba"></div>
+<!--skew (IZQ a der)-->
+<div class="skew"></div>
+<section id="maquetas">
+    <div class="general_container" id="maquetas_container">
+        <div class="containter_content">
+            <h2>DISEÑOS</h2>
 
-    <section id="maquetas">
-        <div class="general_container" id="maquetas_container">
-            <div class="containter_content">
-                <h2>DISEÑOS</h2>
-
-                <div class="container_designs">
-
-                    <div class="design">
-                        <img src="./imagenes/mtsweb.jpeg" alt="">
-                    </div>
-
-                    <div class="design">
-                        <img src="./imagenes/mtsweb.jpeg" alt="">
-                    </div>
-
-                    <div class="design">
-                        <img src="./imagenes/mtsweb.jpeg" alt="">
-                    </div>
-
-                        <div id="desplegable" class="oculto">
-                            <div class="design">
-                                <img src="./imagenes/mtsweb.jpeg" alt="">
-                            </div>
-
-                            <div class="design">
-                                <img src="./imagenes/mtsweb.jpeg" alt="">
-                            </div>
-
-                            <div class="design">
-                                <img src="./imagenes/mtsweb.jpeg" alt="">
-                            </div>
-                        </div>
-
-                    <button id="miBoton">VER MÁS</button>
-
-                </div>
+            <div class="container_designs" id="container_designs">
+                <!-- Aquí se mostrarán los primeros 3 resultados -->
             </div>
 
+            <!-- Aquí se mostrarán los resultados adicionales al hacer clic en "Ver Más" -->
+            <div id="container_designs_hidden" class="oculto">
+            </div>
+
+            <div id="verMasBtn" class="contenedorbutton" data-animation="diagonal">
+                <div class="button">
+                    <a href="#0" id="miBoton">
+                        VER MAS
+                        <span class="border border-top"></span>
+                        <span class="border border-right"></span>
+                        <span class="border border-bottom"></span>
+                        <span class="border border-left"></span>
+                    </a>
+                </div>
+            </div>
+            
         </div>
-    </section>
+    </div>
+</section>
 
 <!--insertar skew (IZQ a der)-->
-<div class="skew-main"></div>
+<div class="skew_contact"></div>
 
     <section id="contacto">
         <div class="general_container" id="form_container">
@@ -115,8 +103,8 @@
       
               <div class="info-container">
                 <h2>Información de contacto</h2>
-                <p>Teléfono: </p>
-                <p>Correo electrónico: </p>
+                <p>Whatsapp: +54 9 11 6815-5673</p>
+                <p>Correo electrónico: lautaroperezga@gmail.com</p>
                 <p>Github: </p>
               </div>
             </div>
@@ -128,6 +116,40 @@
     <p>footer</p>
 </footer>
 
+<!----------MODAL DESPLEGADO---------->
+<div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Información del Elemento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <img src="" alt="Imagen del elemento" id="modal-imagen">
+                </div>
+                <!-- <div>
+                    <p id="modal-nombre"></p>
+                </div> -->
+                <div>
+                    <h6>Descripción:</h6>
+                    <p id="modal-descripcion"></p>
+                </div>
+                <div>
+                    <h6>Precio:</h6>
+                    <p id="modal-precio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------SCRIPTS---------->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="paginasEnVenta.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
@@ -159,4 +181,13 @@
     el por qué hago esto
     -------------------------------------------------
     por ultimo el formulario de contacto
+-->
+
+<!--
+    PENDIENTES:
+
+    * Ajuste de contenido en los modal "ocultos"
+    * Ajuste de modal backdrop (fondo) en los modal "ocultos"
+    * Seccion About Me
+    * Responsive
 -->

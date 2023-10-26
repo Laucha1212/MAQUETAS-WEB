@@ -9,6 +9,7 @@ window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.querySelector(".header_container").classList.remove("ocultar");
+        document.querySelector(".header_container").classList.add("header_on_page");
     } else {
         document.querySelector(".header_container").classList.add("ocultar");
     }
@@ -19,8 +20,6 @@ window.onscroll = function() {
 document.getElementById("miBoton").addEventListener("click", function() {
    document.getElementById("desplegable").classList.toggle("oculto");
 });
-
-
 const boton = document.getElementById("miBoton");
 const contenedor = document.getElementById("desplegable");
 boton.addEventListener("click", function() {
