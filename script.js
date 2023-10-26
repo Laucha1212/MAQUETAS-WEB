@@ -4,9 +4,9 @@ document.querySelector('.boton-hamburguesa').addEventListener('click', function(
   });
 
 //DESPLAZAR NAV CON EL SCROLL
-var prevScrollpos = window.pageYOffset;
+var prevScrollpos = window.scrollY;
 window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
+    var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
         document.querySelector(".header_container").classList.remove("ocultar");
         document.querySelector(".header_container").classList.add("header_on_page");

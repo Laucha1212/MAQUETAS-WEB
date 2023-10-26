@@ -25,10 +25,16 @@
     left: 0;
     border-width: 0 0 10vh 100vw;
     border-style: solid;
-    border-color: transparent transparent #333 transparent;
+    border-color: transparent transparent var(--body-bg-color) transparent;
 }
 p{
     font-family: 'Lato', sans-serif;
+}
+.mostrar{
+    display: block !important;
+}
+.oculto, .ocultar{
+    display: none !important;
 }
 /*-HEADER----------------------------------------------------------------------------------*/
 .header_container{
@@ -68,12 +74,12 @@ p{
     flex-direction: column;
     align-items: end;
 }
-.boton-hamburguesa {
+.menu-hamburguesa .boton-hamburguesa {
     background: none;
     border: none;
     cursor: pointer;
 }
-.linea {
+.menu-hamburguesa .boton-hamburguesa .linea {
     display: block;
     width: 25px;
     height: 3px;
@@ -81,18 +87,14 @@ p{
     background-color: #fff;
     border-radius: 3px;
 }
-.menu {
+.menu-hamburguesa .menu {
     display: none;
     list-style: none;
     position: absolute;
     top: 3rem;
     right: 0;
-    border: 1px solid #000;
 }
-/*.menu li {
-    margin-bottom: 10px;
-}*/
-.menu a {
+.menu-hamburguesa .menu a {
     display: block;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.9);
@@ -100,14 +102,8 @@ p{
     text-decoration: none;
     width: 100%;
 }
-.mostrar{
-    display: block;
-}
-.oculto, .ocultar{
-    display: none;
-}
 /*-MAIN/INICIO------------------------------------------------------------------------------------*/
-.container_inicio{
+#inicio .container_inicio{
     height: 100vh;
     background-color: grey;
     background-image: url(./imagenes/971.jpg);
@@ -115,15 +111,15 @@ p{
     background-size:cover;
     background-repeat: no-repeat;
 }
-.effect_opacity{
+#inicio .container_inicio .effect_opacity{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.info-banner{
+#inicio .container_inicio .effect_opacity .info-banner{
     position: relative;
     width: 60%;
     margin: auto;
@@ -131,23 +127,23 @@ p{
     height: 100vh;
     color: #fff;
 }
-.info-banner h6{
+#inicio .container_inicio .effect_opacity .info-banner h6{
     font-family: 'Fjalla One', sans-serif;
     font-size: 40px;
     margin:0 auto 5px;
     text-align: center;
 }
-.info-banner p{
+#inicio .container_inicio .effect_opacity .info-banner p{
     margin-top: 10px;
     font-size: 18px;
     text-align: center;
     font-weight:600
 }
-.info-banner .container-buttons{
+#inicio .container_inicio .effect_opacity .info-banner .container-buttons{
     display: flex;
     justify-content: space-between;
 }
-.info-banner .button-banner{
+#inicio .container_inicio .effect_opacity .info-banner .container-buttons .button-banner{
     display: inline-block;
     padding: 8px 10px;
     background-color: red;
