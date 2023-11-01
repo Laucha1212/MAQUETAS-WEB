@@ -17,16 +17,16 @@ window.onscroll = function() {
 }
 
 //BOTON VER MAS Y VER MENOS DE LAS MAQUETAS
-document.getElementById("miBoton").addEventListener("click", function() {
-   document.getElementById("desplegable").classList.toggle("oculto");
-});
-const boton = document.getElementById("miBoton");
-const contenedor = document.getElementById("desplegable");
-boton.addEventListener("click", function() {
-  contenedor.classList.toggle("visible");
-  if (contenedor.classList.contains("visible")) {
-    boton.textContent = "Ver menos";
-  } else {
-    boton.textContent = "Ver más";
-  }
-});
+// document.getElementById("miBoton").addEventListener("click", function() {
+//    document.getElementById("desplegable").classList.toggle("oculto");
+// });
+// const boton = document.getElementById("miBoton");
+// const contenedor = document.getElementById("desplegable");
+// boton.addEventListener("click", function() {
+//   contenedor.classList.toggle("visible");
+//   if (contenedor.classList.contains("visible")) {
+//     boton.textContent = "Ver menos";
+//   } else {
+//     boton.textContent = "Ver más";
+//   }
+// });

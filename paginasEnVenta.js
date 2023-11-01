@@ -70,12 +70,6 @@ mock = [
         "id": "14"
     }
 ]
-
-// Obtén los contenedores
-const cardContainer = document.getElementById("container_designs");
-const hiddenContainer = document.getElementById("container_designs_hidden");
-const verMasBtn = document.getElementById("verMasBtn");
-
 // Copia el array de "mock"
 const copiaMock = mock.map((articulo) => {
     return `
@@ -84,25 +78,27 @@ const copiaMock = mock.map((articulo) => {
             <img src="${articulo.urlImagen}"></img>
             <div class="info-card">
                 <h5>${articulo.nombre}</h5>
+                <h6>${articulo.precio}</h6>
             </div>
         </button>
     </div>`;
 });
 
-// Agrega los primeros 3 elementos al contenedor principal
+// Obtén los contenedores
+const cardContainer = document.getElementById("container_designs_visible");
+const hiddenContainer = document.getElementById("container_designs_hidden");
+const verMasBtn = document.getElementById("verMasBtn");
+
+// Agrega los primeros 3 elementos al contenedor principal y el resto al hidden
 cardContainer.innerHTML = copiaMock.slice(0, 3).join("");
+hiddenContainer.innerHTML = copiaMock.slice(3).join("");
+
 // Muestra el resto de los elementos ocultos bajo el boton VER MAS
 verMasBtn.addEventListener("click", function() {
     // Muestra los elementos ocultos
-    const elementosOcultosContenedor = document.getElementById("container_designs_hidden");
-    elementosOcultosContenedor.innerHTML = copiaMock.slice(3).join("");
-    elementosOcultosContenedor.classList.remove("oculto");
+    hiddenContainer.classList.remove("oculto");
     // Oculta el botón "Ver Más"
     verMasBtn.style.display = "none";
-    
-    // Agrega los elementos ocultos al contenedor principal
-    const elementosHTML = elementosOcultosContenedor.innerHTML;
-    cardContainer.insertAdjacentHTML("beforeend", elementosHTML);
 });
 
 
@@ -119,28 +115,29 @@ document.querySelectorAll('.open-modal').forEach((button) => {
 
         // Actualiza el contenido del modal de manera segura
         updateModalContent(itemData);
-
         const modalInstance = new bootstrap.Modal(modal);
-
         modalInstance.show();
     });
 });
 
 // Obtén el botón de cierre del modal
 const cerrarModalButton = document.querySelector('.btn-close');
+
 // Agrega un evento 'click' al botón de cierre para llamar a la función
 cerrarModalButton.addEventListener('click', restaurarBodyYBackdrop);
 function restaurarBodyYBackdrop() {
+
     // Elimina las clases del modal-backdrop si existen
     const modalBackdrop = document.querySelector('.modal-backdrop');
     if (modalBackdrop) {
         modalBackdrop.classList.remove('fade', 'show', 'modal-backdrop');
     }
 
-// Obtén una referencia al modal
-var bodyElement = document.body;
-// Cambia la propiedad 'overflow'
-bodyElement.style = 'overflow: auto !important;';
+    // Obtén una referencia al modal
+    var bodyElement = document.body;
+    // Cambia la propiedad 'overflow'
+    bodyElement.style = 'overflow: auto !important;';
+
 }
 
 

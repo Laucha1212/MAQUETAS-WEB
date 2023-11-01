@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
 <!--HEADER-->
 <header>
     <div class="header_container">
@@ -35,7 +34,8 @@
         </nav>
     </div>
 </header>
-    <!--MAIN-->
+
+<!--MAIN-->
 <main>
     <section id="inicio">
         <div class="container_inicio">
@@ -54,38 +54,57 @@
     </section>
 
 <!--skew (IZQ a der)-->
-<div class="skew"></div>
-<section id="maquetas">
-    <div class="general_container" id="maquetas_container">
-        <div class="containter_content">
-            <h2>DISEÑOS</h2>
+    <div class="skew"></div>
 
-            <div class="container_designs" id="container_designs">
-                <!-- Aquí se mostrarán los primeros 3 resultados -->
-            </div>
+    <section id="maquetas">
+        <div class="general_container" id="maquetas_container">
+            <div class="containter_content">
+                <h2>DISEÑOS</h2>
 
-            <!-- Aquí se mostrarán los resultados adicionales al hacer clic en "Ver Más" -->
-            <div id="container_designs_hidden" class="oculto">
-            </div>
-
-            <div id="verMasBtn" class="contenedorbutton" data-animation="diagonal">
-                <div class="button">
-                    <a href="#0" id="miBoton">
-                        VER MAS
-                        <span class="border border-top"></span>
-                        <span class="border border-right"></span>
-                        <span class="border border-bottom"></span>
-                        <span class="border border-left"></span>
-                    </a>
+                <!--INPUT BUSCADOR Y FILTROS POR PRECIO-->
+                <div class="contenidoPreArticulos">
+                    <div class="buscador">
+                        <input type="text" id="searchInput" placeholder="Buscar...">
+                    </div>
+                    <div class="filtro">
+                        <p>ordenar por:</p>
+                        <select id="filtroPrecios">
+                            <option value="opcion1">.</option>
+                            <option value="opcion2">Menor a mayor</option>
+                            <option value="opcion3">Mayor a menor</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
+                
+                <!--CONTENEDORES DE PRODUCTOS INSERTADOS DESDE JS-->
+                <div id="container_designs_gral">
+                    <div class="container_designs_visible" id="container_designs_visible">
+                        <!-- Aquí se mostrarán los primeros 3 resultados -->
+                    </div>
+                    <div id="container_designs_hidden" class="oculto">
+                        <!-- Aquí se mostrarán los resultados adicionales al hacer clic en "Ver Más" -->
+                    </div>
+                </div>
 
-<!--insertar skew (IZQ a der)-->
-<div class="skew_contact"></div>
+                <!--BOTÓN VER MÁS-->
+                <div id="verMasBtn" class="contenedorbutton" data-animation="diagonal">
+                    <div class="button">
+                        <a href="#0" id="miBoton">
+                            VER MAS
+                            <span class="border border-top"></span>
+                            <span class="border border-right"></span>
+                            <span class="border border-bottom"></span>
+                            <span class="border border-left"></span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--insertar skew (IZQ a der)-->
+    <div class="skew_contact"></div>
 
     <section id="contacto">
         <div class="general_container" id="form_container">
@@ -93,32 +112,32 @@
                 <h2>Contacto</h2>
 
                 <form action="./formulario.php" method="POST">
-                  <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                  <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-                  <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
 
-                  <input type="submit" value="Enviar">
+                    <input type="submit" value="Enviar">
                 </form>
-              </div>
-      
-              <div class="info-container">
+            </div>
+
+            <div class="info-container">
                 <h2>Información de contacto</h2>
                 <p>Whatsapp: +54 9 11 6815-5673</p>
                 <p>Correo electrónico: lautaroperezga@gmail.com</p>
                 <p>Github: </p>
-              </div>
             </div>
         </div>
     </section>
 </main>
-    <!--FOOTER-->
+
+<!--FOOTER-->
 <footer>
     <p>footer</p>
 </footer>
 
 <!----------MODAL DESPLEGADO---------->
 <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modal-title">Información del Elemento</h5>
@@ -150,6 +169,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="paginasEnVenta.js"></script>
+<script src="filtrosProductos.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

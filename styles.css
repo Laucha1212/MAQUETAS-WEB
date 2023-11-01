@@ -172,7 +172,7 @@ p{
 #maquetas{
     background-color: #fff;
 }
-.container_designs{
+.container_designs_visible{
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
@@ -184,6 +184,11 @@ p{
     display: inline-block;
     width: 100%; /*ajustable responsive: 300px*/
     height: auto; /*ajustable responsive: 250px*/
+}
+.articles .info-card h6{
+    font-size: 14px;
+    float: right;
+    margin-right: 15px;
 }
 .design img{
     width: auto;
@@ -232,6 +237,16 @@ body {
 }
 .modal .modal-dialog .modal-content .modal-body div #modal-precio{
     display: inline-block;
+}
+/*arreglo estilos por defecto bootstrap*/
+.card{
+    background-color: none;
+    --bs-card-border-width: none;
+}
+.btn-primary{
+    --bs-btn-hover-bg: none;
+    --bs-btn-active-bg: none;
+    --bs-btn-border-color: none;
 }
 
 
